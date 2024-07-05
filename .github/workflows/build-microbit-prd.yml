@@ -1,21 +1,21 @@
-name: Build Microbit Dev
+name: Build Microbit Prd
 
 on:
   push:
-    branches: [develop]
+    branches: [main]
 
 jobs:
 
   build:
     uses: team-monolith-product/tmn-gh-actions/.github/workflows/build.yml@main
     with:
-      env: dev
-      target: develop
-      awsImageName: jce-ecr-pxt-microbit-all-dev
-      awsValueFilePath: pxt-microbit/dev.yaml
-      ncpRegistry: ped-cr-all-dev.ncr.gov-ntruss.com
+      env: prd
+      target: main
+      awsImageName: jce-ecr-pxt-microbit-all-prd
+      awsValueFilePath: pxt-microbit/prd.yaml
+      ncpRegistry: ped-cr-all-prd.ncr.gov-ntruss.com
       ncpImageName: jce-pxt-microbit
-      ncpValueFilePath: pxt-microbit/ncloud.yaml
+      ncpValueFilePath: pxt-microbit/ncloud-prd.yaml
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
