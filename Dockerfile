@@ -15,7 +15,6 @@ RUN npm install -g serve pxt
 # install app dependencies
 COPY package.json package-lock.json ./
 RUN npm ci
-RUN pxt ci
 
 # add app
 COPY . ./
