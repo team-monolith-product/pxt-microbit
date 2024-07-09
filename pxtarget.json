@@ -626,6 +626,20 @@
                 "hideMenuBar": true,
                 "workspaceSearch": true
             }
+        },
+        "codle": {
+            "cloud": {
+                "apiRoot": "https://class.dev.codle.io/microbit",
+                "cloudProviders": {
+                    "github" : false,
+                    "microsoft" : false,
+                    "google" : false,
+                    "clever" : false,
+                    "codle": {
+                        "identity": true
+                    }
+                }
+            }
         }
     },
     "uploadDocs": false
