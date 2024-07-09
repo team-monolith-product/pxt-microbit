@@ -628,8 +628,14 @@
             }
         },
         "codle": {
+            "appTheme": {
+                "lockedEditor": true,
+                "docMenu": false,
+                "githubEditor": false 
+            },
             "cloud": {
                 "apiRoot": "https://class.dev.codle.io/microbit",
+                "sharing": false,
                 "cloudProviders": {
                     "github" : false,
                     "microsoft" : false,
