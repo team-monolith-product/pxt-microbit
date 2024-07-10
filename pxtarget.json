@@ -631,7 +631,11 @@
             "appTheme": {
                 "lockedEditor": true,
                 "docMenu": false,
-                "githubEditor": false 
+                "githubEditor": false,
+                "organizationLogo": false,
+                "organizationWideLogo": false,
+                "logo": false,
+                "portraitLogo": false
             },
             "cloud": {
                 "sharing": false,
