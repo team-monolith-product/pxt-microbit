@@ -11,10 +11,10 @@ jobs:
     with:
       env: prd
       target: main
-      awsImageName: jce-ecr-pxt-makecode-all-prd
+      awsImageName: jce-ecr-pxt-microbit-all-prd
       awsValueFilePath: pxt-makecode/prd.yaml
       ncpRegistry: ped-cr-all-prd.ncr.gov-ntruss.com
-      ncpImageName: jce-pxt-makecode
+      ncpImageName: jce-pxt-microbit
       ncpValueFilePath: pxt-makecode/ncloud-prd.yaml
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
