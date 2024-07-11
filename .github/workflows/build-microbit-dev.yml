@@ -1,4 +1,4 @@
-name: Build Microbit Dev
+name: Build Makecode Dev
 
 on:
   push:
@@ -11,11 +11,11 @@ jobs:
     with:
       env: dev
       target: develop
-      awsImageName: jce-ecr-pxt-microbit-all-dev
-      awsValueFilePath: pxt-microbit/dev.yaml
+      awsImageName: jce-ecr-pxt-makecode-all-dev
+      awsValueFilePath: pxt-makecode/dev.yaml
       ncpRegistry: ped-cr-all-dev.ncr.gov-ntruss.com
-      ncpImageName: jce-pxt-microbit
-      ncpValueFilePath: pxt-microbit/ncloud.yaml
+      ncpImageName: jce-pxt-makecode
+      ncpValueFilePath: pxt-makecode/ncloud.yaml
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

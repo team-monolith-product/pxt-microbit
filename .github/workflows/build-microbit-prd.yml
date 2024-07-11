@@ -1,4 +1,4 @@
-name: Build Microbit Prd
+name: Build Makecode Prd
 
 on:
   push:
@@ -11,11 +11,11 @@ jobs:
     with:
       env: prd
       target: main
-      awsImageName: jce-ecr-pxt-microbit-all-prd
-      awsValueFilePath: pxt-microbit/prd.yaml
+      awsImageName: jce-ecr-pxt-makecode-all-prd
+      awsValueFilePath: pxt-makecode/prd.yaml
       ncpRegistry: ped-cr-all-prd.ncr.gov-ntruss.com
-      ncpImageName: jce-pxt-microbit
-      ncpValueFilePath: pxt-microbit/ncloud-prd.yaml
+      ncpImageName: jce-pxt-makecode
+      ncpValueFilePath: pxt-makecode/ncloud-prd.yaml
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
