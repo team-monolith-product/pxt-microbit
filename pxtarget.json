@@ -459,7 +459,7 @@
             }
         ],
         "hasReferenceDocs": true,
-        "usbDocs": "/device/usb",
+        "usbDocs": "https://makecode.microbit.org/device/usb",
         "hideHomeDetailsVideo": true,
         "invertedMenu": true,
         "coloredToolbox": true,
@@ -565,7 +565,7 @@
         "chooseLanguageRestrictionOnNewProject": true,
         "openProjectNewTab": true,
         "python": true,
-        "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
+        "appFlashingTroubleshoot": "https://makecode.microbit.org/device/windows-app/troubleshoot",
         "immersiveReader": true,
         "tutorialCodeValidation": true,
         "downloadDialogTheme": {
@@ -574,10 +574,10 @@
             "deviceIcon": "xicon microbit",
             "deviceSuccessIcon": "xicon microbit-check",
 
-            "downloadMenuHelpURL" : "/device/usb",
-            "downloadHelpURL" : "/device/usb",
-            "troubleshootWebUSBHelpURL": "/device/usb/webusb/troubleshoot",
-            "incompatibleHardwareHelpURL": "/device/v2",
+            "downloadMenuHelpURL" : "https://makecode.microbit.org/device/usb",
+            "downloadHelpURL" : "https://makecode.microbit.org/device/usb",
+            "troubleshootWebUSBHelpURL": "https://makecode.microbit.org/device/usb/webusb/troubleshoot",
+            "incompatibleHardwareHelpURL": "https://makecode.microbit.org/device/v2",
 
             "dragFileImage": "/static/download/transfer.png",
             "connectDeviceImage": "/static/download/connect-microbit.gif",
