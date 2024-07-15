@@ -626,6 +626,29 @@
                 "hideMenuBar": true,
                 "workspaceSearch": true
             }
+        },
+        "codle": {
+            "appTheme": {
+                "lockedEditor": true,
+                "docMenu": false,
+                "githubEditor": false,
+                "organizationLogo": false,
+                "organizationWideLogo": false,
+                "logo": false,
+                "portraitLogo": false
+            },
+            "cloud": {
+                "sharing": false,
+                "cloudProviders": {
+                    "github" : false,
+                    "microsoft" : false,
+                    "google" : false,
+                    "clever" : false,
+                    "codle": {
+                        "identity": true
+                    }
+                }
+            }
         }
     },
     "uploadDocs": false
