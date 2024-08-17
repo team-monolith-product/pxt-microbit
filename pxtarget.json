@@ -627,7 +627,7 @@
                 "workspaceSearch": true
             }
         },
-        "codle": {
+        "custom": {
             "appTheme": {
                 "lockedEditor": true,
                 "docMenu": false,
@@ -644,7 +644,7 @@
                     "microsoft" : false,
                     "google" : false,
                     "clever" : false,
-                    "codle": {
+                    "custom": {
                         "identity": true
                     }
                 }
