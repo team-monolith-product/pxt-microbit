@@ -12,6 +12,9 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 RUN npm install -g serve pxt
 
+# CSAP-U07 소유자가 존재하지 않는 파일 제거
+RUN chown -R root:root /opt/yarn-v*
+
 # install app dependencies
 COPY package.json package-lock.json ./
 RUN npm ci
