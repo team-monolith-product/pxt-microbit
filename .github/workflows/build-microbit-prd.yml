@@ -7,15 +7,22 @@ on:
 jobs:
 
   build:
-    uses: team-monolith-product/tmn-gh-actions/.github/workflows/build.yml@main
+    uses: team-monolith-product/tmn-gh-actions/.github/workflows/build_v2.yml@main
     with:
       env: prd
       target: main
-      awsImageName: jce-ecr-pxt-microbit-all-prd
-      awsValueFilePath: makecode/prd.yaml
-      ncpRegistry: ped-cr-all-prd.ncr.gov-ntruss.com
-      ncpImageName: jce-pxt-microbit
-      ncpValueFilePath: makecode/ncloud-prd.yaml
+      updateTargets: |
+        {
+          "aws": {
+            "imageName": "jce-ecr-pxt-microbit-all-prd",
+            "valueFilePath": ["makecode/prd.yaml", "makecode/aws-apne2-prd.yaml"]
+          },
+          "ncp": {
+            "registry": "ped-cr-all-prd.ncr.gov-ntruss.com",
+            "imageName": "jce-pxt-microbit",
+            "valueFilePath": ["makecode/ncloud-prd.yaml"]
+          }
+        }
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
