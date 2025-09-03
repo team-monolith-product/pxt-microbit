@@ -15,7 +15,7 @@ jobs:
         {
           "aws": {
             "imageName": "jce-ecr-pxt-microbit-all-prd",
-            "valueFilePath": ["makecode/prd.yaml", "makecode/aws-apne2-prd.yaml"]
+            "valueFilePath": ["makecode/aws-apne2-prd-service.yaml"]
           },
           "ncp": {
             "registry": "ped-cr-all-prd.ncr.gov-ntruss.com",
