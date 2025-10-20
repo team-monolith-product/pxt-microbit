@@ -1,5 +1,8 @@
-# pull official base image
-FROM node:18-alpine as base
+# Build arguments
+ARG NGINX_VERSION=1.29.1-alpine
+
+# Build stage
+FROM node:18-alpine AS builder
 
 # set working directory
 WORKDIR /app
@@ -7,10 +10,8 @@ WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
-# Increase Node.js heap size
-# ENV NODE_OPTIONS="--max_old_space_size=4096"
-
-RUN npm install -g serve pxt
+# Install pxt globally
+RUN npm install -g pxt
 
 # CSAP-U07 소유자가 존재하지 않는 파일 제거
 RUN chown -R root:root /opt/yarn-v*
@@ -22,13 +23,41 @@ RUN npm ci
 # add app
 COPY . ./
 
-# start app
+# build app
+RUN pxt staticpkg
+
+# Dev stage
+FROM nginx:${NGINX_VERSION} AS dev
+
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy built app from builder stage
+COPY --from=builder /app/built/packaged /usr/share/nginx/html
+
+# Compress static files for better performance
+RUN find /usr/share/nginx/html -type f \
+  \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" \) \
+  -size +1024c \
+  -exec gzip -6 -k {} \;
+
+# Expose port 4000
 EXPOSE 4000
 
-FROM base as dev
-RUN pxt staticpkg
-ENTRYPOINT serve -l 4000 built/packaged/
+# Production stage
+FROM nginx:${NGINX_VERSION} AS prd
 
-FROM base as prd
-RUN pxt staticpkg
-ENTRYPOINT serve -l 4000 built/packaged/
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy built app from builder stage
+COPY --from=builder /app/built/packaged /usr/share/nginx/html
+
+# Compress static files for better performance
+RUN find /usr/share/nginx/html -type f \
+  \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" \) \
+  -size +1024c \
+  -exec gzip -6 -k {} \;
+
+# Expose port 4000
+EXPOSE 4000
