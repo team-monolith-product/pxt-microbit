@@ -22,6 +22,7 @@
     "cloud": {
         "workspace": false,
         "packages": true,
+        "noGithubProxy": true,
         "sharing": true,
         "thumbnails": true,
         "publishing": true,
