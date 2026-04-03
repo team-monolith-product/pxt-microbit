@@ -32,6 +32,9 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy built app from builder stage
 COPY --from=builder /app/built/packaged /usr/share/nginx/html
 
+# Copy instrumentation script
+COPY instrumentation.js /usr/share/nginx/html/instrumentation.js
+
 # Compress static files for better performance
 RUN find /usr/share/nginx/html -type f \
   \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" \) \
@@ -49,6 +52,9 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy built app from builder stage
 COPY --from=builder /app/built/packaged /usr/share/nginx/html
+
+# Copy instrumentation script
+COPY instrumentation.js /usr/share/nginx/html/instrumentation.js
 
 # Compress static files for better performance
 RUN find /usr/share/nginx/html -type f \
