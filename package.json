@@ -47,13 +47,5 @@
   "dependencies": {
     "pxt-common-packages": "13.0.0",
     "pxt-core": "npm:@team-monolith/pxt-core@^0.7.0"
-  },
-  "overrides": {
-    "@blockly/plugin-workspace-search": {
-      "blockly": "12.2.0"
-    },
-    "@blockly/field-grid-dropdown": {
-      "blockly": "12.2.0"
-    }
   }
 }
