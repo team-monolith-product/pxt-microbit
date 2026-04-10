@@ -9,11 +9,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Microsoft/pxt-microbit.git"
+    "url": "git+https://github.com/microsoft/pxt-microbit.git"
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/Microsoft/pxt-microbit#readme",
+  "homepage": "https://github.com/microsoft/pxt-microbit#readme",
   "files": [
     "README.md",
     "pxtarget.json",
@@ -45,7 +45,7 @@
     "typescript": "4.8.3"
   },
   "dependencies": {
-    "pxt-common-packages": "13.0.0",
+    "pxt-common-packages": "13.2.3",
     "pxt-core": "npm:@team-monolith/pxt-core@^0.7.0"
   }
 }

@@ -70,6 +70,10 @@ Many extensions are available to work with interface kits, add-on hardware, or o
 
 ```codecard
 [{
+    "name": "TM1638",
+    "url": "/pkg/NathanPervin/pxt-tm1638",
+    "cardType": "package"
+}, {
     "name": "Pythom1234 OLED Display SSD1306 128x64",
     "url": "/pkg/Pythom1234/pxt-oled",
     "cardType": "package"
@@ -388,16 +392,28 @@ Many extensions are available to work with interface kits, add-on hardware, or o
 
 ```codecard
 [{
+   "name": "FWD Edu Coding For Good Kit",
+   "url": "/pkg/Forward-Education/pxt-coding-for-good",
+   "cardType": "package"
+}, {
+   "name": "Smarthon Smart Home IoT Maker Kit",
+   "url": "/pkg/SMARTHON/pxt-smarthome",
+   "cardType": "package"
+}, {
    "name": "FWD Edu Smart Solder Kit",
-   "url": "/pkg/Forward-Education/pxt-solder-3b3l",
+   "url": "/pkg/Forward-Education/pxt-smart-soldering",
    "cardType": "package"
 }, {   
    "name": "FWD Edu Smart Solar Kit",
-   "url": "/pkg/Forward-Education/pxt-solar",
+   "url": "/pkg/Forward-Education/pxt-smart-solar",
    "cardType": "package"
 }, {
    "name": "FWD Edu Smart Hydroponics Kit",
-   "url": "/pkg/Forward-Education/pxt-hydroponics",
+   "url": "/pkg/Forward-Education/pxt-smart-hydroponics",
+   "cardType": "package"
+}, {
+   "name": "FWD Edu Smart: All Kits",
+   "url": "/pkg/Forward-Education/pxt-all-fwd-blocks",
    "cardType": "package"
 }, {
    "name": "BP Lab micro:bit Kit",
@@ -467,6 +483,10 @@ Many extensions are available to work with interface kits, add-on hardware, or o
   "name": "Joy-IT Joy-Pi Advanced",
   "url":"/pkg/joy-it/pxt-RB-JoyPi-Advanced",
   "cardType": "package"
+}, {
+   "name": "FWD Edu Climate Action Kit",
+   "url": "/pkg/Forward-Education/pxt-climate-action",
+   "cardType": "package"
 }, {
   "name": "FWD Edu Climate Action Kit Gen. 2 Kit",
   "url":"/pkg/climate-action-kits/pxt-fwd-edu",
@@ -543,12 +563,32 @@ Many extensions are available to work with interface kits, add-on hardware, or o
   "name": "DFRobot HuskyLens",
   "url":"/pkg/DFRobot/pxt-DFRobot_HuskyLens",
   "cardType": "package"
+}, {
+  "name": "DFRobot HuskyLens 2",
+  "url":"/pkg/DFRobot/pxt-DFRobot_HuskyLensV2",
+  "cardType": "package"
 }]
 ```
 ## Robotics
 
 ```codecard
 [{
+  "name": "Siyeenove Pybit",
+  "url":"/pkg/siyeenove/pxt_pybit",
+  "cardType": "package"
+}, {
+  "name": "Siyeenove mShield",
+  "url":"/pkg/siyeenove/pxt_mshield",
+  "cardType": "package"
+}, {
+  "name": "BrailleBot",
+  "url":"/pkg/roborisen/braillebot",
+  "cardType": "package"
+}, {
+  "name": "Kitronik Mai-Z the Mouse Bot",
+  "url":"/pkg/KitronikLtd/pxt-kitronik-mai-z",
+  "cardType": "package"
+}, {
   "name": "DFRobot Creative Robotics Kit",
   "url":"/pkg/DFRobot/pxt-DFRobot_creative-robotics-kit",
   "cardType": "package"
@@ -883,6 +923,14 @@ Many extensions are available to work with interface kits, add-on hardware, or o
 
 ```codecard
 [{
+    "name": "BestModules BMduino",
+    "url": "/pkg/BestModules-Libraries/pxt-bmduino",
+    "cardType": "package"
+}, {
+    "name": "Backyard Brains Spiker:Bit",
+    "url": "/pkg/BackyardBrains/pxt-spikerbit",
+    "cardType": "package"
+}, {
     "name": "Elecfreaks Petal:bit",
     "url": "/pkg/elecfreaks/pxt-petal",
     "cardType": "package"
