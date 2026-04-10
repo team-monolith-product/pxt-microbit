@@ -102,12 +102,13 @@ Tutorials, lessons, and mini-courses about programming and computing.
 }, {
   "name": "Networking with the micro:bit",
   "description": "A series of activities to teach the basics of computer networks.",
-  "url": "https://microbit.nominetresearch.uk/",
+  "url": "https://www.digitaltechnologieshub.edu.au/search/networking-with-the-micro-bit/",
   "imageUrl": "/static/courses/networking-book.png"  
 }, {
   "name": "SparkFun Videos",
   "description": "YouTube video tutorials produced by the SparkFun team!",
-  "url": "https://youtu.be/kaNtg1HGXbY?list=PLBcrWxTa5CS0mWJrytvii8aG5KUqMXvSk",
+  "youTubeId": "kaNtg1HGXbY",
+  "youTubePlaylistId": "PLBcrWxTa5CS0mWJrytvii8aG5KUqMXvSk",
   "imageUrl": "https://i.ytimg.com/vi/kaNtg1HGXbY/hqdefault.jpg"
 }, {
   "name": "Logic Lab",
@@ -116,8 +117,8 @@ Tutorials, lessons, and mini-courses about programming and computing.
   "imageUrl":"/static/courses/logic-lab.png"
 }, {
   "name": "CodeJoy Remote Robotics",
-  "description": "Interactive remote robotics and& coding classes for students and educators",
-  "url": "https://www.codejoyeducation.com",
+  "description": "Interactive remote robotics and coding classes for students and educators",
+  "url": "https://www.codejoy.org",
   "imageUrl": "/static/courses/codejoy.png"
 }]
 ```
