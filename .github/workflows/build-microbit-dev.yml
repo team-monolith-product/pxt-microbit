@@ -1,0 +1,29 @@
+name: Build Makecode Dev
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+
+  build:
+    uses: team-monolith-product/tmn-gh-actions/.github/workflows/build_v2.yml@develop
+    with:
+      env: dev
+      target: develop
+      updateTargets: |
+        {
+          "aws": {
+            "imageName": "jce-ecr-pxt-microbit-all-dev",
+            "valueFilePath": ["makecode/aws-apne2-dev-service.yaml"]
+          },
+          "ncp": {
+            "registry": "ped-cr-all-dev.ncr.gov-ntruss.com",
+            "imageName": "jce-pxt-microbit",
+            "valueFilePath": ["makecode/ncloud.yaml"]
+          }
+        }
+    secrets:
+      NCP_ACCESS_KEY_ID: ${{ secrets.NCP_ACCESS_KEY_ID }}
+      NCP_SECRET_KEY: ${{ secrets.NCP_SECRET_KEY }}
+      MACHINE_TOKEN: ${{ secrets.MACHINE_TOKEN }}
