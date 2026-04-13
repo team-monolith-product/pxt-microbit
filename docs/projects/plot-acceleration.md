@@ -19,7 +19,17 @@ basic.forever(function() {
 
 ## Console
 
-Click on the **Show Console** button by the simulator to see a chart of the values plotted by the block over a period of time. Hover over the board in the simulator to make a force in the ``x`` dimension.
+Click on the **(+)** in the ``||led:plot bar graph||`` block to expand it. The ``||led:serial write||`` parameter will appear and is set to **ON**. Now, after a moment, the **Show data Simulator** button will show up near the simulator. Click on it to see a chart of the values plotted by the block over a period of time. Hover over the board in the simulator to make a force in the ``x`` dimension.
+
+```blocks
+basic.forever(function() {
+    led.plotBarGraph(
+        input.acceleration(Dimension.X),
+        0,
+        true
+    )
+})
+```
 
 ## Maximum value
 
@@ -30,20 +40,22 @@ For example, we can tell the block that we don't expect values beyond ``1000`` m
 basic.forever(function() {
     led.plotBarGraph(
         input.acceleration(Dimension.X),
-        1000
+        1000,
+        true
     )
 })
 ```
 
 ## Other sensors
 
-You can use this block for pretty much any kind of data. Try it out! Plot the ``||input:light level||`` inside the ``||loops:forever||`` instead. Play with the light sensor in the simulator. 
+You can use this block for pretty much any kind of data. Try it out! Plot the ``||input:light level||`` inside the ``||basic:forever||`` instead. Play with the light sensor in the simulator. 
 
 ```blocks
 basic.forever(function() {
     led.plotBarGraph(
         input.lightLevel(),
-        0
+        0,
+        true
     )
 })
 ```

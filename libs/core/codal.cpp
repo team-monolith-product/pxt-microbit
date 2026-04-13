@@ -50,7 +50,6 @@ MicroBitEvent lastEvent;
 bool serialLoggingDisabled;
 
 void platform_init() {
-    microbit_seed_random();
     int seed = microbit_random(0x7fffffff);
     DMESG("random seed: %d", seed);
     seedRandom(seed);
@@ -83,10 +82,7 @@ void deleteListener(MicroBitListener *l) {
 }
 
 static void initCodal() {
-    // TODO!!!
-#ifndef MICROBIT_CODAL
     uBit.messageBus.setListenerDeletionCallback(deleteListener);
-#endif
 
     // repeat error 4 times and restart as needed
     microbit_panic_timeout(4);
@@ -98,7 +94,7 @@ static void initCodal() {
 
 void registerWithDal(int id, int event, Action a, int flags) {
     uBit.messageBus.ignore(id, event, dispatchForeground);
-    uBit.messageBus.listen(id, event, dispatchForeground, a);
+    uBit.messageBus.listen(id, event, dispatchForeground, a, (uint16_t) flags);
     incr(a);
     registerGCPtr(a);
 }
