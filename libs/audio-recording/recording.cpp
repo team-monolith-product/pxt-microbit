@@ -38,22 +38,20 @@ static MixerChannel *channel = NULL;
 #endif
 
 
-void checkEnv(int sampleRate = -1) {
+void checkEnv() {
 #if MICROBIT_CODAL
     if (recording == NULL) {
-        if (sampleRate == -1)
-            sampleRate = 11000;
+        int defaultSampleRate = 11000;
         MicroBitAudio::requestActivation();
 
         splitterChannel = uBit.audio.splitter->createChannel();
+        uBit.audio.mic->setSampleRate( defaultSampleRate );
 
         recording = new StreamRecording(*splitterChannel);
 
-        channel = uBit.audio.mixer.addChannel(*recording, sampleRate);
+        channel = uBit.audio.mixer.addChannel(*recording, defaultSampleRate);
 
         channel->setVolume(75.0);
-        uBit.audio.mixer.setVolume(1000);
-        uBit.audio.setSpeakerEnabled(true);
     }
 #endif
 }
@@ -174,7 +172,7 @@ bool audioIsStopped() {
 void setInputSampleRate(int sampleRate) {
 #if MICROBIT_CODAL
     checkEnv();
-    splitterChannel->requestSampleRate(sampleRate);
+    uBit.audio.mic->setSampleRate(sampleRate);
 #else
     target_panic(PANIC_VARIANT_NOT_SUPPORTED);
 #endif
@@ -187,11 +185,8 @@ void setInputSampleRate(int sampleRate) {
 //%
 void setOutputSampleRate(int sampleRate) {
 #if MICROBIT_CODAL
-    if (recording == NULL) {
-        checkEnv(sampleRate);
-    } else {
-        channel->setSampleRate(sampleRate);
-    }
+    checkEnv();
+    channel->setSampleRate(sampleRate);
 #else
     target_panic(PANIC_VARIANT_NOT_SUPPORTED);
 #endif
@@ -204,7 +199,7 @@ void setOutputSampleRate(int sampleRate) {
 void setBothSamples(int sampleRate) {
 #if MICROBIT_CODAL
     setOutputSampleRate(sampleRate);
-    splitterChannel->requestSampleRate(sampleRate);
+    uBit.audio.mic->setSampleRate(sampleRate);
 #else
     target_panic(PANIC_VARIANT_NOT_SUPPORTED);
 #endif

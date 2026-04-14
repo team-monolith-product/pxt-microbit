@@ -2,19 +2,6 @@
 
 A collection of courses and tutorials built for the @boardname@.
 
-## First lessons with MakeCode and the micro:bit
-
-A sequence of six beginner lessons, ideal for getting started with the micro:bit. Students will learn core computing concepts by making and coding engaging projects.
-
-```codecard
-[{
-  "name": "First Lessons",
-  "description": "A sequence of lessons from the Micro:bit Educational Foundation that provide a pathway through six projects, ideal for getting started with the micro:bit",
-  "url":"https://microbit.org/teach/lessons/first-lessons-with-makecode-and-the-microbit",
-  "imageUrl": "/static/courses/first-lessons.png"
-}]
-```
-
 ## Intro to Computer Science
 
 MakeCode's course for learning Computer Science with the micro:bit. This is a 14 week computer science course for middle school grades 6-8.
@@ -102,12 +89,13 @@ Tutorials, lessons, and mini-courses about programming and computing.
 }, {
   "name": "Networking with the micro:bit",
   "description": "A series of activities to teach the basics of computer networks.",
-  "url": "https://microbit.nominetresearch.uk/",
+  "url": "https://www.digitaltechnologieshub.edu.au/search/networking-with-the-micro-bit/",
   "imageUrl": "/static/courses/networking-book.png"  
 }, {
   "name": "SparkFun Videos",
   "description": "YouTube video tutorials produced by the SparkFun team!",
-  "url": "https://youtu.be/kaNtg1HGXbY?list=PLBcrWxTa5CS0mWJrytvii8aG5KUqMXvSk",
+  "youTubeId": "kaNtg1HGXbY",
+  "youTubePlaylistId": "PLBcrWxTa5CS0mWJrytvii8aG5KUqMXvSk",
   "imageUrl": "https://i.ytimg.com/vi/kaNtg1HGXbY/hqdefault.jpg"
 }, {
   "name": "Logic Lab",
@@ -116,8 +104,8 @@ Tutorials, lessons, and mini-courses about programming and computing.
   "imageUrl":"/static/courses/logic-lab.png"
 }, {
   "name": "CodeJoy Remote Robotics",
-  "description": "Interactive remote robotics and& coding classes for students and educators",
-  "url": "https://www.codejoyeducation.com",
+  "description": "Interactive remote robotics and coding classes for students and educators",
+  "url": "https://www.codejoy.org",
   "imageUrl": "/static/courses/codejoy.png"
 }]
 ```
