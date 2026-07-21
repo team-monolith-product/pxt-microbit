@@ -34,7 +34,7 @@ COPY --from=builder /app/built/packaged /usr/share/nginx/html
 
 # Compress static files for better performance
 RUN find /usr/share/nginx/html -type f \
-  \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" \) \
+  \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" -o -name "*.html" \) \
   -size +1024c \
   -exec gzip -6 -k {} \;
 
@@ -52,7 +52,7 @@ COPY --from=builder /app/built/packaged /usr/share/nginx/html
 
 # Compress static files for better performance
 RUN find /usr/share/nginx/html -type f \
-  \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" \) \
+  \( -name "*.js" -o -name "*.css" -o -name "*.json" -o -name "*.svg" -o -name "*.txt" -o -name "*.xml" -o -name "*.map" -o -name "*.html" \) \
   -size +1024c \
   -exec gzip -6 -k {} \;
 
