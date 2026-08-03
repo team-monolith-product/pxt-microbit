@@ -1,5 +1,5 @@
 # Build arguments
-ARG NGINX_VERSION=1.30.2-alpine
+ARG NGINX_VERSION=1.30.4-alpine
 
 # Build stage
 FROM node:18-alpine AS builder
